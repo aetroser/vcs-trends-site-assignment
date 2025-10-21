@@ -1,10 +1,10 @@
-/* Very simple CSS for a beginner-friendly layout */
 
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background: #ffffff;
+    background: #fbfdff;
     color: #222;
+    line-height: 1.5;
 }
 
 a {
@@ -13,20 +13,22 @@ a {
 }
 a:hover {
     text-decoration: underline;
+    color: #024ea8;
 }
 
-/* Navigation */
 .site-nav {
-    background: #f2f2f2;
+    background: #f7f7f8;
     padding: 10px 16px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border-bottom: 1px solid #e6e6e6;
 }
 
 .brand {
     font-weight: bold;
     font-size: 16px;
+    color: #0366d6;
 }
 
 .nav-list {
@@ -43,8 +45,10 @@ a:hover {
     padding: 6px 8px;
     border-radius: 4px;
 }
+.nav-list li a:hover {
+    background: rgba(3,102,214,0.06);
+}
 
-/* Page content */
 .page {
     max-width: 800px;
     margin: 24px auto;
@@ -56,14 +60,18 @@ a:hover {
     margin-bottom: 16px;
 }
 
-.content {
-    background: #fff;
-    padding: 16px;
-    border: 1px solid #eee;
-    border-radius: 6px;
+.page-header h1 {
+    margin: 0 0 8px 0;
+    font-size: 1.6rem;
+    color: #111;
 }
 
-/* Footer */
+.tagline {
+    margin: 0;
+    color: #666;
+    font-size: 0.95rem;
+}
+
 .site-footer {
     text-align: center;
     color: #666;
@@ -73,22 +81,9 @@ a:hover {
     border-top: 1px solid #eee;
 }
 
-/* Small screens: show simple toggle (no JS here) */
 .nav-toggle {
     display: none;
     background: transparent;
     border: none;
     font-size: 18px;
-}
-
-@media (max-width: 600px) {
-    .nav-list {
-        display: none;
-    }
-    .nav-toggle {
-        display: inline-block;
-    }
-    .page {
-        margin: 12px auto;
-    }
 }
